@@ -1,1 +1,21 @@
-export const styleDictionary = new Map();
+import { homePage } from "./homePage";
+import { inputField } from "./inputField";
+import { textArea } from "./textArea";
+import { header } from "./header";
+import { footer } from "./footer";
+import { videoPreview } from "./vedioPreview";
+
+type StyleVariant = Record<string, Record<string, string | number>>;
+
+type PageStyle = {
+    mobile?: StyleVariant;
+    desktop?: StyleVariant;
+}
+
+export const styleDictionary = new Map<string, PageStyle>();
+    styleDictionary.set("homePage", homePage);
+    styleDictionary.set("inputField", inputField);
+    styleDictionary.set("textArea", textArea);
+    styleDictionary.set("header", header);
+    styleDictionary.set("footer", footer);
+    styleDictionary.set("videoPreview", videoPreview);
