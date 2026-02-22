@@ -7,7 +7,7 @@ export interface ButtonProps {
   type: "button" | "submit";
   variant: "primary" | "secondary";
   disabled: boolean;
-  loading: boolean;
+  loading?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = (Props) => {
