@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import { setMobile } from './redux/styleSlice'
 import { useRoutes } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
+import { Login } from './components/userLogin/Login'
 
 function App() {
   const dispatch = useDispatch();
@@ -12,7 +13,8 @@ function App() {
 
   const AppRoutes = () => {
     const routes = useRoutes([
-      {path : "/" , element : <HomePage />}
+      {path : "/" , element : <HomePage />},
+      {path : "/signIn" , element : <Login />}
     ])
     return routes;
   }

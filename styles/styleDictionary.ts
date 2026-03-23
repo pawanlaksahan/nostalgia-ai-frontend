@@ -3,9 +3,10 @@ import { inputField } from "./inputField";
 import { textArea } from "./textArea";
 import { header } from "./header";
 import { footer } from "./footer";
+import { login } from "./login";
 import { videoPreview } from "./vedioPreview";
 
-type StyleVariant = Record<string, Record<string, string | number>>;
+type StyleVariant = Record<string, Record<string, string | number | object>>;
 
 type PageStyle = {
     mobile?: StyleVariant;
@@ -19,3 +20,4 @@ export const styleDictionary = new Map<string, PageStyle>();
     styleDictionary.set("header", header);
     styleDictionary.set("footer", footer);
     styleDictionary.set("videoPreview", videoPreview);
+    styleDictionary.set("login", login)
