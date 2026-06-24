@@ -3,10 +3,10 @@ import axios from "axios";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export const postSocialToken = async (token: string, provider: 'google' | 'meta') => {
-    const endpoint = "api/user/socialLoginValidate";
+    const endpoint = "/api/user/socialLoginValidate";
     try {
         const response = await axios.post(baseUrl + endpoint, {
-            tokenId: token ,
+            tokenId: token,
             provider: provider
         });
         if (response.data.token) {
